@@ -1,6 +1,18 @@
+$fz: 80px;
+
+%plborder{
+    border-bottom: 5px dashed red;
+}
+
+@mixin fontz() {
+    font-size:  $fz;
+}
+
 .block{
+    width: 300px / 960px * 100%;
+    background-color: blue;
     padding: 30px;
-    font-size: 50px;
+    font-size:  $fz;
     line-height: 60px;
     >p{
         color: red;
@@ -9,13 +21,23 @@
         color: green;
     }
     .block__text{
-        font-size: 80px;
+        font-size: $fz;
     }
 }
 .link{
-    color: pink;
+    color: blueviolet;
     text-decoration: none;
+
+    .block &{
+        font-size: $fz;
+    }
+
     &:hover{
         color: green;
     }
+    @extend  %plborder;
+}
+
+.link2{
+    @include fontz($fz)
 }

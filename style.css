@@ -1,6 +1,10 @@
+.link {
+  border-bottom: 5px dashed red;
+}
+
 .block {
   padding: 30px;
-  font-size: 50px;
+  font-size: 80px;
   line-height: 60px;
 }
 .block > p {
@@ -17,6 +21,13 @@
   color: pink;
   text-decoration: none;
 }
+.block .link {
+  font-size: 80px;
+}
 .link:hover {
   color: green;
+}
+
+.link2 {
+  font-size: 80px;
 }/*# sourceMappingURL=style.css.map */
